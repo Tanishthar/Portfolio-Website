@@ -144,9 +144,14 @@
       // Display User Message in Chatbox
       displayMessage(userMessage, "user");
       chatInput.value = ""; // Clear input field
-  
+
+      require('dotenv').config();
+
+      // Access your API key
+      const apiKey = process.env.GEMINI_API_KEY;
+
       try {
-        const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/learnlm-1.5-pro-experimental:generateContent?key=AIzaSyC-Mf-tRoPrxAhZB5plCnC2J63HB3_WRbY", {
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/learnlm-1.5-pro-experimental:generateContent?key=${apiKey}`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
