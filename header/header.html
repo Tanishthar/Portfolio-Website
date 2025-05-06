@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/header/header.css">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <!-- Sticky Header -->
+  <header id="sticky-header">
+    <h1 style="font-family: 'Jaini';">Tanish Thar</h1>
+    <nav style="font-family: 'JUlius Sans One';">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="more-about-me.html">More About Me</a>
+      <a href="contact.html">Hire Me</a>
+    </nav>
+  </header>
+
+  <script>
+    // Get the sticky header element
+    const stickyHeader = document.getElementById('sticky-header');
+
+    window.addEventListener("scroll", function () {
+      let header = document.getElementById("sticky-header");
+      if (window.scrollY > 50) {
+        header.classList.add("collapsed");
+      } else {
+        header.classList.remove("collapsed");
+      }
+    });
+  </script>
+</body>
+</html>

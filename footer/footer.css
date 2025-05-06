@@ -1,0 +1,54 @@
+/* Footer */
+footer {
+  background: rgba(24, 24, 24, 0.6); /* Semi-transparent background */
+  color: #aaa;
+  padding-top: 10px; 
+  padding-bottom: 20px;
+  text-align: center;
+  backdrop-filter: blur(3px); /* Adds a glassy effect */
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Ensures even spacing */
+  gap: 20px;
+  text-align: center;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px; /* Prevents columns from shrinking too much */
+  max-width: 250px; /* Ensures consistency */
+  text-align: left;
+}
+
+.footer-column h3 {
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  display: block; /* Ensures only text is clickable */
+  color: #aaa;
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 0px 10px 8px 0px;
+  padding: 0; /* Removes any extra clickable padding */
+}
+
+.footer-column a:hover {
+  color: #fff;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: left;
+}

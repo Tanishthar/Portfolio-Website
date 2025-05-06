@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>More About Me</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Jaini&family=Julius+Sans+One&family=Lexend+Exa:wght@100..900&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  
+  <div class="main-content">
+    <canvas id="canvas"></canvas>
+
+    <!-- Header -->
+    <div id="header-container"></div> <!-- Placeholder for the header -->
+    <script>
+      // Load the header dynamically
+      fetch("header/header.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("header-container").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading header:", error));
+    </script>
+
+    <section class="webpage-header">
+      <h1 class="jaini-text">More About Me</h1>
+      <p>Exploring the World, One Trip at a Time</p>
+    </section>
+
+    <!-- 3D Model -->
+    <div id="model-container"></div> <!-- Placeholder for the 3D model -->
+    <script>
+      fetch("3d-model/model.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("model-container").innerHTML = data;
+          // Manually load the script after inserting the model
+          const script = document.createElement("script");
+          script.src = "3d-model/model.js";
+          script.defer = true;
+          document.body.appendChild(script);
+        })
+        .catch(error => console.error("Error loading model:", error));
+    </script>
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery" class="section">
+      <h2>My Adventures</h2>
+      <div class="photo-grid">
+        <div class="photo-card">
+          <img src="images/trip1.jpg" alt="Trip 1" class="lightbox-trigger">
+          <p>Goa</p>
+        </div>
+        <div class="photo-card">
+          <img src="images/trip2.jpg" alt="Trip 2" class="lightbox-trigger">
+          <p>Amritsar</p>
+        </div>
+        <div class="photo-card">
+          <img src="images/trip3.jpg" alt="Trip 3" class="lightbox-trigger">
+          <p>Kasol & Kullu</p>
+        </div>
+        <!-- Add more photos as needed -->
+      </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="section">
+      <h2>My Hobbies</h2>
+      <ul>
+        <li>Photography</li>
+        <li>Traveling</li>
+        <li>Cricket</li>
+        <li>Electronics</li>
+        <li>Car Enthusiast</li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer-container"></div> <!-- Placeholder for the footer -->
+  <script>
+    // Load the footer dynamically
+    fetch("footer/footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-container").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading footer:", error));
+  </script>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+  <div id="lightbox" class="hidden">
+    <span class="close-btn">&times;</span>
+    <img id="lightbox-img" src="">
+  </div>
+  
+</body>
+</html>

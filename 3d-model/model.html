@@ -1,0 +1,63 @@
+<!-- This file contains all the code related to 3d model and the chatbot -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/3d-model/model.css">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="model-container">
+    <!-- 3D Model -->
+    <model-viewer
+      id="floating-model"
+      src="models/lego_batman.glb"
+      alt="A 3D model"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      environment-image="neutral"
+      auto-rotate
+      camera-controls>
+    </model-viewer>
+  </div>
+
+  <!-- Floating Chat Trigger Button -->
+  <button id="open-chat" class="floating-chat-button" title="Chat with me!">
+    💬
+  </button>
+
+  <!-- Chatbox Container (Initially Hidden) -->
+  <div id="chatbox" class="chatbox-container">
+    <div class="chatbox-header">
+      <span class="chatbox-title">TAN AI</span>
+      <button id="close-chat" class="close-button">&times;</button>
+    </div>
+    <div id="chat-messages" class="chatbox-messages"></div>
+    <div class="chatbox-input-area">
+      <input id="chat-input" type="text" placeholder="Type a message..." />
+      <div class="send-button-container">
+        <button class="button-with-icon" id="send-button">
+          <svg class="icon" id="Play" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path class="color000000 svgShape" fill="#ffffff"
+              d="M12 39c-.549 0-1.095-.15-1.578-.447A3.008 3.008 0 0 1 9 36V12c0-1.041.54-2.007 1.422-2.553a3.014 3.014 0 0 1 2.919-.132l24 12a3.003 3.003 0 0 1 0 5.37l-24 12c-.42.21-.885.315-1.341.315z">
+            </path>
+          </svg>
+          <span class="text">Send</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Continue Chat Button (Initially Hidden) -->
+  <button id="continue-chat" class="button" title="Continue your chat!">
+    <div class="button-top">Continue Chat</div>
+    <div class="button-bottom"></div>
+    <div class="button-base"></div>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="model.js" defer></script>
+</body>
+</html>

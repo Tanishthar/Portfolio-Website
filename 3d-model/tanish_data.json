@@ -1,0 +1,82 @@
+{
+  "name": "Tanish Shah",
+  "email": "tanishshah121@gmail.com",
+  "phone": "+91 8108267971",
+  "location": "Borivali, Mumbai, India",
+  "linkedin": "https://linkedin.com/in/tanish-thar",
+  "github": "https://github.com/Tanishthar",
+  "profile": "Tanish Shah is a dedicated and enthusiastic Computer Science student at D. J. Sanghvi College of Engineering. He is an ambivert with excellent communication skills, making him a great speaker and listener. He is a proactive team player with strong leadership skills, constantly seeking to learn and grow.",
+  "engineering college":{
+    "name": "Dwarkadas Jivanlal Sanghavi College of Engineering",
+    "degree": "Bachelor of Technology in Computer Engineering",
+    "graduation year": 2027
+  },
+  "education": {
+    "Maharashtra CET": "98.34%",
+    "JEE Mains": "90.66% percentile"
+  },
+  "experience": [
+    {
+      "role": "ML Developer",
+      "organization": "Synapse Committee of D.J. Sanghvi College of Engineering",
+      "duration": "July 2023 – Present"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Bicep Curl Repetition Counter",
+      "description": "A computer vision-based fitness assistant that detects and counts bicep curl repetitions using real-time video processing.",
+      "technology": ["Python", "OpenCV", "Mediapipe"],
+      "features": [
+        "Uses Mediapipe's pose estimation model to detect arm movement.",
+        "Automatically counts repetitions based on the arm’s angle.",
+        "Provides real-time feedback for proper form and technique.",
+        "Can be extended for other exercises like squats and push-ups."
+      ],
+      "use_case": "Helps fitness enthusiasts track their workouts without needing expensive gym equipment."
+    },
+    {
+      "name": "Gesture-Based DJ Control System",
+      "description": "A system that allows DJs to control music playback using hand gestures, eliminating the need for physical touch-based interfaces.",
+      "technology": ["Python", "OpenCV", "Mediapipe", "PyGame"],
+      "features": [
+        "Hand tracking and gesture recognition using Mediapipe.",
+        "Implemented logarithmic volume control for a natural sound experience.",
+        "Real-time visual feedback on screen for intuitive interaction.",
+        "Auto-pause feature when no hands are detected.",
+        "User-friendly UI with a clean and minimalist design."
+      ],
+      "use_case": "Useful for DJs who want a touch-free, futuristic way to control their music sets during live performances."
+    },
+    {
+      "name": "Portfolio Website",
+      "description": "A visually stunning and interactive portfolio website showcasing Tanish's projects, skills, and personal achievements.",
+      "technology": ["HTML", "CSS", "JavaScript", "Three.js"],
+      "features": [
+        "Dark-themed UI with a dynamic starfield background.",
+        "Interactive 3D model that changes upon user interaction.",
+        "A chatbot named TAN AI that can provide insights about Tanish.",
+        "Scroll animations and hover effects for a smooth user experience.",
+        "Modular structure with reusable HTML, CSS, and JavaScript components."
+      ],
+      "use_case": "Allows visitors to explore Tanish's work in an engaging and interactive way."
+    }
+  ],
+  "skills": {
+    "programming_languages": ["C (basic)", "Java (basic)", "Python (intermediate)", "HTML", "CSS", "JavaScript (intermediate)"],
+    "AI_ML_libraries": ["NumPy", "PyTorch", "TensorFlow", "Pandas", "Keras", "Matplotlib", "Scikit-learn", "Seaborn"]
+  },
+  "achievements": [
+    "Member of the school’s football and cricket team for 3 years with unbeaten records.",
+    "Instructor at Nehru Science Centre’s robotic workshops, teaching students how to build and program robots using LEGO."
+  ],
+  "personality_analysis": {
+    "problem_solving": "Tanish is highly analytical and enjoys solving complex problems, especially in AI, machine learning, and cybersecurity.",
+    "creativity": "He is very creative, especially when designing UI/UX for his projects. He focuses on aesthetics and user experience.",
+    "learning_mentality": "Tanish is self-motivated and constantly seeks to improve his skills. He is always working on new projects and exploring different technologies.",
+    "work_ethic": "He is dedicated and detail-oriented, ensuring that every aspect of his projects is polished before considering them complete.",
+    "communication": "Despite being an ambivert, he is an effective communicator, capable of explaining complex topics clearly and concisely.",
+    "passion_for_technology": "Tanish is deeply passionate about AI, ML, and cybersecurity. He enjoys pushing the boundaries of what technology can do.",
+    "attention_to_detail": "He dislikes cluttered or unpolished work, striving for clean and refined designs in both code and UI/UX."
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hire Me</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Jaini&family=Julius+Sans+One&family=Lexend+Exa:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <div class="main-content ">
+    <canvas id="canvas"></canvas>
+
+    <!-- Header -->
+    <div id="header-container"></div> <!-- Placeholder for the header -->
+    <script>
+      // Load the header dynamically
+      fetch("header/header.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("header-container").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading header:", error));
+    </script>
+
+    <section class="webpage-header">
+      <h1 class="jaini-text">Hire Me</h1>
+      <p>Feel free to reach out!</p>
+    </section>
+
+    <!-- 3D Model -->
+    <div id="model-container"></div> <!-- Placeholder for the 3D model -->
+    <script>
+      fetch("3d-model/model.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("model-container").innerHTML = data;
+          // Manually load the script after inserting the model
+          const script = document.createElement("script");
+          script.src = "3d-model/model.js";
+          script.defer = true;
+          document.body.appendChild(script);
+        })
+        .catch(error => console.error("Error loading model:", error));
+    </script>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" style="padding-bottom: 10px">
+      <div class="contact-links">
+        <button class="btn julius" id="linkedin">LinkedIn
+        </button>
+
+        <button class="btn julius" id="github">GitHub
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <div>
+    <h2>CLick below to view my resume</h2>
+    <button class="btn julius" id="resume">Resume 📄
+    </button>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer-container"></div> <!-- Placeholder for the footer -->
+  <script>
+    // Load the footer dynamically
+    fetch("footer/footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-container").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading footer:", error));
+  </script>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
