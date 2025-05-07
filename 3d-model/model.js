@@ -71,7 +71,6 @@
 
     // Open chatbox when the open chat button is pressed
     document.getElementById("open-chatbox").addEventListener("click", function () {
-    document.getElementById("open-chatbox").addEventListener("click", function () {
       console.log("Open chat button pressed");
       chatbox.style.display = "flex";
       openChat.style.display = "none";
