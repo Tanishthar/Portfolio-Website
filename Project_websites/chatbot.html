@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>AI Chatbot</title>
+      <link rel="stylesheet" href="styles.css">
+      <script defer src="script.js"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  </head>
+  <body>
+    <canvas id="starCanvas"></canvas>
+
+    <header id="sticky-header">
+      <div class="header-row">
+        <h1>Tanish Thar</h1>
+        <div id="menu-toggle">&#9776;</div>
+      </div>
+    
+      <nav id="nav-links" style="align-items: center;">
+        <a href="#intro">Project Title</a>
+        <a href="#description">Description</a>
+        <a href="#tech">Tech</a>
+        <a href="#demo" style="padding-right: 40px;">Demo</a>
+      </nav>
+    </header>            
+      
+    <section id="intro" class="full-screen">
+    <div class="content split-layout">
+        <div class="left-pane">
+        <h1>AI Chatbot</h1>
+        </div>
+        <div class="right-pane">
+        <img src="images/ai_chatbot.png" alt="AI Chatbot Project Image">
+        </div>
+    </div>
+    <div class="scroll-down">↓ Scroll Down ↓</div>
+    </section>      
+
+    <section id="details" class="hidden">
+      <section class="full-screen">
+        <section id="description">
+          <div class="center-box">
+            <h2>Description</h2>
+            <p>I made this AI chatbot using langlow to understand how agentic AI works and learn working of langflow, this chatbot is context aware about me. If the chatbot is asked questions about who I am or what I do it can easily answer.</p>
+          </div>
+        </section>
+        
+        <section id="tech">
+          <div class="center-box">
+            <h2>Tech Stack</h2>
+
+              Langflow.
+              <br><br>
+              Gemini API for AI & Conversation.
+          </div>
+        </section>
+      </section>
+
+      <section class="full-screen" id="demo">
+        <div class="center-box video-demo" style="max-width: 2000px;">
+          <h2>Demo</h2>
+          <video controls>
+              <source src="demos/ai_chatbot.mp4" type="video/mp4" alt="AI Chatbot Project Video Demo">
+              Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div> <!-- Placeholder for the footer -->
+    <script>
+      // Load the footer dynamically
+      fetch("footer/footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading footer:", error));
+    </script>
+  </body>
+</html>

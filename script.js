@@ -16,40 +16,40 @@
     { 
       title: 'Bicep Curl Rep Counter using ComputerVision', 
       description: 'Python program to count the repetions of bicep curl', 
-      link: 'Project_websites/dj_cv/index.html',
-      image: 'images/projects/bicep.png' },
+      link: 'Project_websites/',
+      image: 'Project_websites/images/bicep.png' },
     { 
       title: 'Portfolio Website', 
       description: 'Portfolio website for myself', 
-      link: '',
-      image: 'images/projects/portfolio.png'},
+      link: 'Project_websites/portfolio.html',
+      image: 'Project_websites/images/portfolio.png'},
     { 
       title: 'DJ Control using ComputerVision', 
       description: 'Using the camera of the PC, detect the hand details to control the functionalities of the song', 
-      link: 'Project_websites/dj_cv/index.html',
-      image: 'images/projects/dj_cv.jpg' },
+      link: 'Project_websites/dj_cv.html',
+      image: 'Project_websites/images/dj_cv.jpg' },
     { 
       title: 'AI Web Scraper', 
       description: 'Using Ollama to get required data from a website using scraping', 
-      link: '',
-      image: 'images/projects/ai_Web_scraper.png' },
+      link: 'Project_websites/web_scraper.html',
+      image: 'Project_websites/images/ai_web_scraper.png' },
     { 
       title: 'AI Chatbot', 
       description: 'Using Agentic AI to make a ai chatbot that is context aware about me ', 
-      link: '',
-      image: 'images/projects/ai_chatbot.png' },
+      link: 'Project_websites/chatbot.html',
+      image: 'Project_websites/images/ai_chatbot.png' },
 
     { 
       title: 'Jarvis', 
       description: 'JARVIS is a voice-activated personal AI assistant inspired by the iconic system from Iron Man.', 
-      link: '',
-      image: 'images/projects/jarvis.jpeg' },
+      link: 'Project_websites/jarvis.html',
+      image: 'Project_websites/images/jarvis.jpeg' },
 
     { 
       title: 'Campus Assisstant – AI Powered Department Chatbot', 
       description: 'A chatbot designed for answering student queries related to College. ', 
-      link: '',
-      image: 'images/projects/mini_proj.jpeg' }
+      link: 'Project_websites/mini_proj.html',
+      image: 'Project_websites/images/mini_proj.jpeg' }
   ];
 
   const projectGrid = document.querySelector('.project-grid');

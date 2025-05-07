@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>AI Web Scraper</title>
+      <link rel="stylesheet" href="styles.css">
+      <script defer src="script.js"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  </head>
+  <body>
+    <canvas id="starCanvas"></canvas>
+
+    <header id="sticky-header">
+      <div class="header-row">
+        <h1>Tanish Thar</h1>
+        <div id="menu-toggle">&#9776;</div>
+      </div>
+    
+      <nav id="nav-links" style="align-items: center;">
+        <a href="#intro">Project Title</a>
+        <a href="#description">Description</a>
+        <a href="#tech">Tech</a>
+        <a href="#demo" style="padding-right: 40px;">Demo</a>
+      </nav>
+    </header>            
+      
+    <section id="intro" class="full-screen">
+    <div class="content split-layout">
+        <div class="left-pane">
+        <h1>AI Web Scraper</h1>
+        </div>
+        <div class="right-pane">
+        <img src="images/ai_web_scraper.png" alt="DJ Control Project Image">
+        </div>
+    </div>
+    <div class="scroll-down">↓ Scroll Down ↓</div>
+    </section>      
+
+    <section id="details" class="hidden">
+      <section class="full-screen">
+        <section id="description">
+          <div class="center-box">
+            <h2>Description</h2>
+            <p>
+              AI Web Scraper is a smart, flexible tool that automatically scrapes data from websites, intelligently extracts relevant information, and optionally summarizes or classifies the data using an AI model.
+            </p>
+            <p>
+              ✅ Key Features:
+              <li>Input URLs and auto-detect data patterns.</li>
+              <li>Scrape both static and dynamic content.</li>
+              <li>Intelligent filtering of content using AI (e.g., extract only reviews, product details, or headlines).</li>
+              <li>AI-based summarization of long-form data (e.g., articles, reports).</li>
+              <li>Captcha detection and retry mechanisms.</li>
+              <li>Display results in the UI instantly.</li>
+            </p>
+          </div>
+        </section>
+        
+        <section id="tech">
+          <div class="center-box">
+            <h2>Tech Stack</h2>
+
+            💻 Frontend :-
+            <br>
+            HTML/CSS/JavaScript – Basic UI for inputting URLs, filters, and viewing scraped data.
+            <br><br>
+            🧠 Backend & AI :-
+            <li>Python – Main language for scraping and AI logic.</li>
+            <li>BeautifulSoup – HTML parsing and data extraction.</li>
+            <li>Selenium – For scraping dynamic content.  </li>
+            <li>Ollama – For AI summarization, data extraction, or intelligent filtering.</li>
+          </div>
+        </section>
+      </section>
+
+      <section class="full-screen" id="demo">
+        <div class="center-box video-demo" style="max-width: 2000px;">
+          <h2>Video Demo</h2>
+          <video controls>
+              <source src="demos/vid-demo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div> <!-- Placeholder for the footer -->
+    <script>
+      // Load the footer dynamically
+      fetch("footer/footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading footer:", error));
+    </script>
+  </body>
+</html>

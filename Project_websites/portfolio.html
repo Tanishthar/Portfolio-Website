@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Portfolio Website</title>
+      <link rel="stylesheet" href="styles.css">
+      <script defer src="script.js"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  </head>
+  <body>
+    <canvas id="starCanvas"></canvas>
+
+    <header id="sticky-header">
+      <div class="header-row">
+        <h1>Tanish Thar</h1>
+        <div id="menu-toggle">&#9776;</div>
+      </div>
+    
+      <nav id="nav-links" style="align-items: center;">
+        <a href="#intro">Home</a>
+        <a href="#description">Description</a>
+        <a href="#tech">Tech</a>
+        <a href="#demo" style="padding-right: 40px;">Demo</a>
+      </nav>
+    </header>            
+      
+    <section id="intro" class="full-screen">
+    <div class="content split-layout">
+        <div class="left-pane">
+        <h1>Portfolio<br>Website</h1>
+        </div>
+        <div class="right-pane">
+        <img src="images/portfolio.png" alt="Portfolio Project Image">
+        </div>
+    </div>
+    <div class="scroll-down">↓ Scroll Down ↓</div>
+    </section>      
+
+    <section id="details" class="hidden">
+      <section class="full-screen">
+        <section id="description">
+          <div class="center-box">
+            <h2>Description</h2>
+            <p>This is a personal portfolio website designed to showcase my work, interests, and journey. It features a sleek, dark-themed interface with a dynamic starfield background and interactive 3D elements. The site highlights my projects through standalone pages with video demos, descriptions, and GitHub links. A rotating 3D model introduces the site and doubles as an AI-powered chatbot for personalized interaction. Additional sections include an about me page, a gallery of my travels and hobbies, and a contact area for collaboration or networking.</p>
+          </div>
+        </section>
+        
+        <section id="tech">
+          <div class="center-box">
+            <h2>Tech Stack</h2>
+            <li>HTML5 & CSS3 – Structure and styling of all web pages</li>
+            <li>Three.js – For rendering and animating the interactive 3D model</li>
+            <li>JavaScript – Interactive features</li>
+          </div>
+        </section>
+      </section>
+
+      <section class="full-screen" id="demo">
+        <div class="center-box video-demo" style="max-width: 2000px;">
+          <h2>Video Demo</h2>
+          <video controls>
+              <source src="demos/portfolio.mp4" type="video/mp4" alt="Portfolio Project Video Demo">
+              Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div> <!-- Placeholder for the footer -->
+    <script>
+      // Load the footer dynamically
+      fetch("footer/footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading footer:", error));
+    </script>
+  </body>
+</html>

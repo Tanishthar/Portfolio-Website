@@ -61,7 +61,7 @@
 
 {//<!-- ChatBot Code -->  
   document.addEventListener("DOMContentLoaded", function () {
-    const openChat = document.getElementById("open-chat");
+    const openChat = document.getElementById("open-chatbox");
     const chatbox = document.getElementById("chatbox");
     const chatMessages = document.getElementById("chat-messages");
     const chatInput = document.getElementById("chat-input");
@@ -70,7 +70,7 @@
     const continueChat = document.getElementById("continue-chat");
 
     // Open chatbox when the open chat button is pressed
-    document.getElementById("open-chat").addEventListener("click", function () {
+    document.getElementById("open-chatbox").addEventListener("click", function () {
       console.log("Open chat button pressed");
       chatbox.style.display = "flex";
       openChat.style.display = "none";

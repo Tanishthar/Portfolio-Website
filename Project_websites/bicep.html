@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Bicep Curl Rep Counter</title>
+      <link rel="stylesheet" href="styles.css">
+      <script defer src="script.js"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  </head>
+  <body>
+    <canvas id="starCanvas"></canvas>
+
+    <header id="sticky-header">
+      <div class="header-row">
+        <h1>Tanish Thar</h1>
+        <div id="menu-toggle">&#9776;</div>
+      </div>
+    
+      <nav id="nav-links" style="align-items: center;">
+        <a href="#intro">Project Title</a>
+        <a href="#description">Description</a>
+        <a href="#tech">Tech</a>
+        <a href="#demo" style="padding-right: 40px;">Demo</a>
+      </nav>
+    </header>            
+      
+    <section id="intro" class="full-screen">
+    <div class="content split-layout">
+        <div class="left-pane">
+        <h1>Bicep Curl Rep Counter<br>Using Computer Vision</h1>
+        </div>
+        <div class="right-pane">
+        <img src="images/bicep.png" alt="Bicep Project Image">
+        </div>
+    </div>
+    <div class="scroll-down">↓ Scroll Down ↓</div>
+    </section>      
+
+    <section id="details" class="hidden">
+      <section class="full-screen">
+        <section id="description">
+          <div class="center-box">
+            <h2>Description</h2>
+            <p>The Bicep Curl Tracker is an AI-powered fitness application that uses computer vision to count repetitions and analyze form during bicep curls. By leveraging pose detection, it tracks key joint angles (shoulder, elbow, wrist) to identify the upward and downward motion of a bicep curl. It provides instant feedback, rep count, and can optionally log workout sessions for progress tracking. Ideal for home workouts, fitness training, or physical therapy.</p>
+            <p>
+              Key Features:
+              
+              <li>Real-time bicep curl detection using webcam.</li>
+              
+              <li>Accurate rep counting based on elbow angle.</li>
+              
+              <li>Visual feedback with skeletal overlay.</li>
+            </p>
+          </div>
+        </section>
+        
+        <section id="tech">
+          <div class="center-box">
+            <h2>Tech Stack</h2>
+            <p>
+              <li>Language: Python</li>
+              <li>Computer Vision: OpenCV</li>
+              <li>Pose Estimation: Mediapipe Pose</li>
+              <li>Mathematics: NumPy (for angle calculations)</li>
+              <li>GUI: OpenCV overlays</li>
+            </p>
+          </div>
+        </section>
+      </section>
+
+      <section class="full-screen" id="demo">
+        <div class="center-box video-demo" style="max-width: 2000px;">
+          <h2>Video Demo</h2>
+          <video controls>
+              <source src="demos/vid-demo.mp4" type="video/mp4" alt="Bicep Project Video Demo">
+              Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div> <!-- Placeholder for the footer -->
+    <script>
+      // Load the footer dynamically
+      fetch("footer/footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading footer:", error));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JARVIS</title>
+      <link rel="stylesheet" href="styles.css">
+      <script defer src="script.js"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  </head>
+  <body>
+    <canvas id="starCanvas"></canvas>
+
+    <header id="sticky-header">
+      <div class="header-row">
+        <h1>Tanish Thar</h1>
+        <div id="menu-toggle">&#9776;</div>
+      </div>
+    
+      <nav id="nav-links" style="align-items: center;">
+        <a href="#intro">Project Title</a>
+        <a href="#description">Description</a>
+        <a href="#tech">Tech</a>
+        <a href="#demo" style="padding-right: 40px;">Demo</a>
+      </nav>
+    </header>            
+      
+    <section id="intro" class="full-screen">
+    <div class="content split-layout">
+        <div class="left-pane">
+        <h1>JARVIS</h1>
+        </div>
+        <div class="right-pane">
+        <img src="images/jarvis.jpeg" alt="Jarvis Project Image">
+        </div>
+    </div>
+    <div class="scroll-down">↓ Scroll Down ↓</div>
+    </section>      
+
+    <section id="details" class="hidden">
+      <section class="full-screen">
+        <section id="description">
+          <div class="center-box">
+            <h2>Description</h2>
+            <p>JARVIS is a voice-activated personal AI assistant inspired by the iconic system from Iron Man. Designed to offer natural, human-like interaction, it integrates voice input/output, intelligent conversation, command execution, and a futuristic graphical interface. It can listen, respond, and carry out tasks like answering questions, running specific commands, and engaging in contextual chat—all while presenting an immersive experience with an arc-reactor-themed animated GUI. </p>
+            <p>The assistant continuously listens for input and maintains conversational flow, responding with natural pauses and a dynamic UI. It's built to be extended for automation, IoT control, or productivity tools.</p>
+          </div>
+        </section>
+        
+        <section id="tech">
+          <div class="center-box">
+            <h2>Tech Stack</h2>
+
+              🗣️Voice Interaction: speech_recognition
+              <br><br>
+              🧠 AI & Conversation:
+              <li>Gemini API</li>
+              <li>Command Parsing </li>
+
+              🖥️ Python GUI Library: Tkinter, PyQt
+          </div>
+        </section>
+      </section>
+
+      <section class="full-screen" id="demo">
+        <div class="center-box video-demo" style="max-width: 2000px;">
+          <h2>Video Demo</h2>
+          <video controls>
+              <source src="demos/jarvis.mp4" type="video/mp4" alt="Jarvis Project Video Demo">
+              Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div> <!-- Placeholder for the footer -->
+    <script>
+      // Load the footer dynamically
+      fetch("footer/footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading footer:", error));
+    </script>
+  </body>
+</html>
